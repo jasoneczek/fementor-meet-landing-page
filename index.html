@@ -7,27 +7,79 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <title>Frontend Mentor | Meet landing page</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- temporary styles for configuring hero grid html-->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      width: min(100% - 2rem, 540px);
+    }
+
+    .hero__image-right {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        flex-direction: row;
+      }
+
+      .hero__image-right {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+  <header class="primary-header">
+    <a href="/"><img src="assets/logo.svg" alt="meet logo"></a>
+  </header>
 
-  Download v1.3
-  What is it?
-
-  01
-  Built for modern use
-
-  Smarter meetings, all in one place
-
-  Send messages, share files, show your screen, and record your meetings — all in one
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
+  <main>
+    <section aria-labelledby="hero-title" class="hero">
+      <picture>
+        <source media="(min-width: 64rem)" srcset="assets/desktop/image-hero-left.png">
+        <source media="(min-width: 48rem)" srcset="assets/tablet/image-hero.png">
+        <img src="assets/tablet/image-hero.png" alt="">
+      </picture>
+      <div class="hero__content">
+        <h1 id="hero-title" class="hero__title">Group Chat for Everyone</h1>
+        <p class="hero__lead">Meet makes it easy to connect with others face-to-face virtually and collaborate across
+          any device.</p>
+        <a href="#" class="btn">Download v1.3</a>
+        <a href="#" class="btn">What is it?</a>
+      </div>
+      <img src="assets/desktop/image-hero-right.png" alt="" class="hero__image-right">
+    </section>
+    <section>
+      01
+      Built for modern use
+      Smarter meetings, all in one place
+      Send messages, share files, show your screen, and record your meetings — all in one
+      workspace. Control who can join with invite-only team access, data encryption, and data export.
+    </section>
+    <section>
+      02
+      Experience more together
+      Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      Download v1.3
+    </section>
+  </main>
 </body>
 
 </html>
