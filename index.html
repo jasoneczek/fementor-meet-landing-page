@@ -7,42 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <title>Frontend Mentor | Meet landing page</title>
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- temporary styles for configuring hero grid html-->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      width: min(100% - 2rem, 540px);
-    }
-
-    .hero__image-right {
-      display: none;
-    }
-
-    @media (min-width: 1024px) {
-      .hero {
-        flex-direction: row;
-      }
-
-      .hero__image-right {
-        display: block;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -52,31 +16,41 @@
 
   <main>
     <section aria-labelledby="hero-title" class="hero">
-      <picture>
-        <source media="(min-width: 64rem)" srcset="assets/desktop/image-hero-left.png">
-        <source media="(min-width: 48rem)" srcset="assets/tablet/image-hero.png">
-        <img src="assets/tablet/image-hero.png" alt="">
-      </picture>
-      <div class="hero__content">
-        <h1 id="hero-title" class="hero__title">Group Chat for Everyone</h1>
-        <p class="hero__lead">Meet makes it easy to connect with others face-to-face virtually and collaborate across
-          any device.</p>
-        <a href="#" class="btn">Download <span>v1.3</span></a>
-        <a href="#" class="btn">What is it?</a>
+      <div class="container hero__grid">
+        <picture>
+          <source media="(min-width: 64rem)" srcset="assets/desktop/image-hero-left.png">
+          <source media="(min-width: 48rem)" srcset="assets/tablet/image-hero.png">
+          <img src="assets/tablet/image-hero.png" alt="">
+        </picture>
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">Group Chat for Everyone</h1>
+          <p class="hero__lead">Meet makes it easy to connect with others face-to-face virtually and collaborate across
+            any device.</p>
+          <a href="#" class="btn">Download <span>v1.3</span></a>
+          <a href="#" class="btn">What is it?</a>
+        </div>
+        <img src="assets/desktop/image-hero-right.png" alt="" class="hero__image-right">
       </div>
-      <img src="assets/desktop/image-hero-right.png" alt="" class="hero__image-right">
     </section>
 
     <ol>
       <li>
         <article class="article" aria-labelledby="article-title-1">
           <p class="article__number"><span>01</span></p>
-          <div class="article__image-wrapper">
-            <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call">
-            <img src="./assets/desktop/image-women-videochatting.jpg" alt="women videchatting">
-            <img src="./assets/desktop/image-men-in-meeting.jpg" alt="men in video meeting">
-            <img src="./assets/desktop/image-man-texting.jpg" alt="man texting">
-          </div>
+          <ul class="gallery">
+            <li class="gallery__img">
+              <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call">
+            </li>
+            <li class="gallery__img">
+              <img src="./assets/desktop/image-women-videochatting.jpg" alt="women videchatting">
+            </li>
+            <li class="gallery__img">
+              <img src="./assets/desktop/image-men-in-meeting.jpg" alt="men in video meeting">
+            </li>
+            <li class="gallery__img">
+              <img src="./assets/desktop/image-man-texting.jpg" alt="man texting">
+            </li>
+          </ul>
           <h2 class="article__title" id="article-title-1">
             <span>Built for modern use</span>
             Smarter meetings, all in one place
