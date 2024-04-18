@@ -55,6 +55,7 @@
   --clr-secondary-v: hsl(268, 100%, 86%);
   --clr-secondary-hover: hsl(267, 54%, 71%);
   /* typography */
+  --ff-ss: 'Red Hat Display', sans-serif;
   --fw-r: 400;
   --fw-m: 500;
   --fw-sb: 600;
@@ -107,7 +108,7 @@ body {
   align-items: center;
   text-align: center;
   overflow-x: hidden;
-  font-family: 'Red Hat Display';
+  font-family: var(--ff-ss);
   font-weight: var(--fw-m);
   font-size: var(--base-text-fluid);
   color: var(--clr-medium-gray);
@@ -281,8 +282,6 @@ li article {
   color: var(--clr-white);
 }
 
-
-
 /* =========================
            utilities
    ========================= */
@@ -348,11 +347,18 @@ button.btn {
 }
 
 button.btn-primary {
-  background-color: var(--clr-primary)
+  background-color: var(--clr-primary);
 }
 
+button.btn-primary:active,
 button.btn-primary:hover {
-  background-color: var(--clr-primary-hover)
+  background-color: var(--clr-primary-hover);
+}
+
+button.btn-primary:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px var(--clr-primary-v);
 }
 
 button.btn-primary span{
@@ -364,9 +370,18 @@ button.btn-secondary {
   background-color: var(--clr-secondary);
 }
 
+a.btn-secondary:active,
+button.btn-secondary:active,
 a.btn-secondary:hover,
 button.btn-secondary:hover {
   background-color: var(--clr-secondary-hover);
+}
+
+a.btn-secondary:focus,
+button.btn-secondary:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px var(--clr-secondary-v);
 }
 
 a.btn-secondary span,
