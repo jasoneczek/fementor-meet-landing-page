@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://jasoneczek-meet-landing-page.netlify.app/)
 - Live Site URL: [Live Site](https://jasoneczek-meet-landing-page.netlify.app/)
 
 ## My process
